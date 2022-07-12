@@ -12,8 +12,13 @@ function submitForm(event) {
     if (email.value === "" || password.value === "") {
         alert("Ви заповнели не всі поляю. Преревірте ще раз.")
     }
-    console.log(event)
-    console.log(`Login: ${email.value}, Password: ${password.value}`)
+
+    const dataForm = {
+        email: email.value,
+        password: password.value,
+    }
+
+    console.log(dataForm)
 
     event.currentTarget.reset()
 }
